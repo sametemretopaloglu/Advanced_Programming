@@ -10,7 +10,7 @@
 
 <h2 id="classworks">Homeworks</h2>
 
-<p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW1">Poisson Probabilities</a></p>
+<p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW1.html">Poisson Probabilities</a></p>
 
 
 
