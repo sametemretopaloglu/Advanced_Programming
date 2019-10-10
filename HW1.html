@@ -1,0 +1,143 @@
+
+<html>
+<h1>Poisson Probabilities</h1>
+<head>
+<style>
+    body { max-width: 440px; }
+    sample { overflow-x: auto; }
+   # table { border-collapse: collapse; }
+    th { color: blue; padding: 5px 5px; }
+    td { 
+        border: 1px solid blue; 
+        padding: 5px 5px; 
+       	 text-align: center; 
+        position: relative;
+    }
+    td:hover .tip {
+        visibility: visible;
+    }
+    td .tip {
+        visibility: hidden;
+        font-size: small;
+      background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 5px 5px;
+        position: absolute;
+        left: 5px; 
+        top: 20px;
+    }
+<b>Sample code</b>
+<pre id=sample></pre>
+  </style>
+<body>
+<center>
+<title>Poisson Probabilities</title>
+<table id="tablo"></table>
+
+</center>
+
+<hr />
+<b>Sample code</b>
+<pre>function makeRows(m, n) {
+    let row = "<th></th>";
+    for (let j = 0; j <n; j++) 
+        row += "<th>"+"λ="+lambda[j]+"</th>";////sütün isimleri
+    let text = "<tr>"+row+"</tr>";
+
+    for (let i = 0; i<m; i++) 
+{
+       row = "<th>"+"x="+a[i]+"</th>";//satır isimleri
+       for (let j = 0; j < n; j++) 
+	{
+          let p = n*(i-1)+j;
+          let s = "<span class=tip>C"+p+"</span>"
+          row += "<td>"+(Math.exp(-lambda[j])*(Math.pow(lambda[j],i)/factorial(i))).toFixed(4)+"</td>";
+       }
+       text += "<tr>"+row+"</tr>";
+    }</pre>
+<hr />
+
+
+    <title>Poisson Probabilities</title>
+    <script>
+function factorial(x){
+    // validating the input
+    x = parseInt(x, 10);
+    if (isNaN(x)) return 1;
+    
+    // if x below 0, return 1
+    if (x <= 0) return 1;
+    // if x above 170, return infinity
+    if (x > 170) return Infinity;
+    // calculating the factorial
+    var y = 1;
+    for (var i = x; i>0; i--){
+        y *= i;
+    }
+    return y;
+}
+
+const lambda =[0.5,1,1.5,2,2.5,3]
+const a = [0,1,2,3,4,5,6,7,8]
+document.write("&nbsp;");document.write("&nbsp;");document.write("&nbsp;");document.write("&nbsp;");document.write("&nbsp;");
+		for (let j=0; j<lambda.length; j++) 
+		{	
+document.write("&nbsp;");document.write("\n");document.write("&nbsp;");document.write("&nbsp;");
+	              document.write("<b>"+"λ="+lambda[j]+"</b>");	     
+		}
+
+
+document.write("<br>");
+        for (let i=0; i<a.length; i++) 
+{    		
+	document.write("<b>"+"x="+a[i]+"</b>"+"\n");
+
+		for (let j=0; j<lambda.length; j++) 
+		{  
+		     document.write((Math.exp(-lambda[j])*(Math.pow(lambda[j],a[i])/factorial(a[i]))).toFixed(4)+"\n"); 
+		}
+
+	document.write("<br>");
+	       
+}
+function makeRows(m, n) {
+    let row = "<th></th>";
+    for (let j = 0; j <n; j++) 
+        row += "<th>"+"λ="+lambda[j]+"</th>";////sütün isimleri
+    let text = "<tr>"+row+"</tr>";
+
+    for (let i = 0; i<m; i++) 
+{
+       row = "<th>"+"x="+a[i]+"</th>";//satır isimleri
+       for (let j = 0; j < n; j++) 
+	{
+          let p = n*(i-1)+j;
+          let s = "<span class=tip>C"+p+"</span>"
+         // row += "<td>"+i+","+j+s+"</td>";
+     
+	row += "<td>"+(Math.exp(-lambda[j])*(Math.pow(lambda[j],i)/factorial(i))).toFixed(4)+"</td>";
+       }
+       text += "<tr>"+row+"</tr>";
+    }
+
+    let t = text.length+" chars";
+     
+    tablo.innerHTML = text; out.innerText = t; 
+   // sample.innerText = makeRows.toString();
+}
+
+    makeRows(a.length,lambda.length);
+
+
+     
+    </script>
+
+</head>
+
+
+
+
+</body>
+
+</html>
