@@ -10,6 +10,8 @@
 
 <h2 id="classworks">Homeworks</h2>
 
+<p>3.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW3.png">Poisson Probabilities</a></p>
+
 
 
 
