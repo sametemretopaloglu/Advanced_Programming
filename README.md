@@ -8,6 +8,8 @@
 
 <p>3.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW3.png">The sum of a range and Day count</a></p>
 
+<p>4.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW2_2">Promise & fetch</a></p>
+
 <p>5.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW5/work/EloquentJS.html">Inspector</a></p>
 
 <h2 id="classworks">Homeworks</h2>
