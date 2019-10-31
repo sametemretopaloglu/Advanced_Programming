@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://maeyler.github.io/JS/sss/inspector.css" 
+          rel="stylesheet" media="all">
+    <link rel="icon" href="../images/icon192.png">
+    <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
+    <script src="c4_data.js"></script>
+    <script src="c6_object.js"></script>
+    <script src="../exam/Quiz.js"></script>
+    <script src="Database.js"></script>
+    <title>Eloquent JavaScript CW5</title>
+</head>
+
+<body>
+<p><b id=docName></b> &nbsp;
+<a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
+<a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
+</p>
+<div id=sss></div>
+<pre id=disp1></pre>
+<img id=disp2 />
+
+<script>
+"use strict";
+var a, b, c, code;  //global variables
+function init() {
+    let len = 123, name = "Circle", pi = Math.PI;
+    a = [0, 11, "22", "abc"];
+    c = {len, name, pi};
+    display(new CW5());
+    display(new Chap4());
+    display(new Chap6());
+    display(new Quiz());
+    MENU = new Async(); //global
+    display(MENU); 
+}
+    docName.innerText = "Inspector "+VERSION;
+    try {
+        inspect(sss, init); //makes the table
+        inp.value = "new Date()";
+    } catch(e) {
+        reportError(e);
+    }
+</script>
+</p><p>
+<h3>Class_Works</h3>
+<li><a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW1.png">CW1-Translate Pie Chart and Looping a triangle</a> </li>
+<li><a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW2_2">CW2-Temperature Conversion</a> </li>
+<li><a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW3.png">CW3-The sum of a range and Day count</a> </li>
+<li><a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW2_2">CW4-Promise & fetch()</a> </li>
+<pre id=disp1></pre>
+<img id=disp2 />
+
+</body>
+</html>
