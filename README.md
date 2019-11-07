@@ -12,6 +12,8 @@
 
 <p>5.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW5/work/EloquentJS.html">Inspector</a></p>
 
+<p>6.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW5/work/CW6.html">Inspector</a></p>
+
 <h2 id="classworks">Homeworks</h2>
 
 <p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW1">Poisson Probabilities</a></p>
