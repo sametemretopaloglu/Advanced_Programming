@@ -12,7 +12,7 @@
 
 <p>5.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW5/work/EloquentJS.html">Inspector</a></p>
 
-<p>6.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW5/work/CW6.html">Inspector</a></p>
+<p>6.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW5/work/CW6.html">File operations</a></p>
 
 <h2 id="classworks">Homeworks</h2>
 
