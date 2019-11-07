@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CW6 FATİH MEHMET ERGİN</title>  
+<style>
+    .link {
+        color: blue;
+        cursor: pointer;
+        font-style: italic;
+    }
+    .course {
+        visibility: hidden;
+        font: 10px arial, sans-serif;
+        color: white;
+        background: blue;
+        cursor: text;
+        padding: 6px;
+        position: absolute;
+        height: 90px;
+        overflow-y: auto;
+    }
+    .link:hover .course { 
+        visibility: visible; 
+    }
+  </style>
+
+<script>
+
+
+"use strict";
+var b='';
+var c='';
+
+var filename='';
+
+var m=new Map();
+
+var dosyalar=[];
+function report(t, n) 
+{
+    b=t;
+    console.log(n? n : t);
+    msg1.innerText="Remote File (url) okundu."+" "+(n? n : t);
+    
+}
+function readText() 
+{
+       fetch(url.value)
+      .then(r => r.text()) 
+      
+      .then(t => report(t, t.length+" chars"));  
+      
+}
+
+
+var reader ;new FileReader();
+function isText(f) {
+    console.assert(f instanceof File);
+    return f.type.startsWith("text") || f.name.endsWith(".md")
+         || f.name.endsWith(".js") || f.name.endsWith(".java");
+}
+function fileSelect(t) 
+{ 
+  console.assert(t == button);
+  msg.innerText='';
+  out3.innerText='';
+  m=new Map();
+ let f; 
+ for ( f of t.files) {
+okundu(f);
+
+}
+
+}
+
+function okundu(f)
+{
+
+    reader =new FileReader();
+    dosyalar.push(f.name);
+    msg.innerText=msg.innerText+"\n"+f.name+ " uzantılı dosya okundu.";
+    const size = " "+f.size+" bytes ";
+        if (f.type.startsWith("image")) {
+        reader.onload = function(evt) {
+        const a = evt.target.result; 
+console.log(f.name+size+f.type);
+c=a;
+fileComparison(f.name);
+        };
+        reader.readAsDataURL(f);
+    } else if (isText(f)) {
+      reader.onload = function(evt) { //text
+      const a = evt.target.result;
+      console.log(f.name+size+f.type);
+      
+c=a;
+fileComparison(f.name);
+        };
+        reader.readAsText(f);
+    } else {
+
+c='';
+fileComparison( f.name);
+    }
+}
+
+function fileComparison(fileName){
+
+if(c==b){
+m.set(fileName, 'ayni');
+}else{
+m.set(fileName, 'farkli');
+
+}
+
+}
+
+function sonuc( ){
+
+var ayni='';
+for (let key of dosyalar) {
+  
+  if(m.get(key)=='ayni'){
+          ayni=ayni+", "+key;
+  }
+
+}
+
+if(ayni.length==0)
+{
+   out3.innerText=m.size+" items checked,all files are different";
+  }
+else
+{
+out3.innerText=m.size+" items checked " + ayni+ "has the same content";
+  }
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+
+
+<h2 id="title"
+">CW6</h2>
+
+
+
+
+<p>
+<input type="text" id="url" value="https://raw.githubusercontent.com/fatihmehmetergin/Artificial_Intelligence/master/README.md" width="60" height="30">
+<!--onChange="readText()"-->
+
+<input type="button" value="link oku" onclick="readText()">
+</p>
+<output id="msg1"> </output>
+
+
+
+
+<p>
+<input type="file"  id="button"  multiple onchange="fileSelect(this)">//Dosya Oku </input>
+</p>
+<p>
+<output id="msg"> </output>
+<output id="msg5"> </output>
+
+</p>
+<button class="button" ,  onClick='sonuc()' width="60" height="30"> result:</button>
+<p>
+<output id="out3"> </output>
+</p>
+<hr />
+
+
+<b>Sample code</b>
+<pre id=sample></pre>
+
+
+
+
+<script>
+    title.innerText = document.title;
+    sample.innerText = okundu;
+
+    
+</script>
+
+
+
+</body>
+
+
+
+</html>
+
+
