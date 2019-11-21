@@ -14,6 +14,9 @@
 
 <p>6.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW6.html">File operations</a></p>
 
+<p>7.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW7/CW7.html">Timing</a></p>
+
+
 <h2 id="classworks">Homeworks</h2>
 
 <p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW1">Poisson Probabilities</a></p>
