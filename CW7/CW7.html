@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="Database.js"></script>
+    <title>CW7/Fatih Mehmet Ergin</title>
+<script>
+"use strict";
+const url = "https://maeyler.github.io/JS/data/"
+const array = [], set = new Set(), map = new Map();
+
+function readData(file) {
+    console.log("readData "+file);
+    fetch(url+file)
+        .then(r => r.text(), console.log)
+        .then(addStudents, console.log);
+}
+function parseStudent(line) {
+    let b = line.split("\t");
+    let id = b[0], name = b[1], gpa = b[2];
+    let std = new Student(id, name, gpa);
+    let list = [];
+    for (let i=3; i<b.length; i++) 
+        list.push(b[i]);
+    std.courses = list
+    return std
+}
+function addStudents(txt) {
+    let msg = "\nData contains ";
+    msg += txt.length+" chars, ";
+    let a = txt.split("\n");
+    msg += a.length+" lines \n";
+    for (let s of a) {
+      let std = parseStudent(s);
+      array.push(std.id); set.add(std.name);
+      map.set(std.id,std);
+    }
+    msg += array.length+" students, "
+    msg += set.size+" distinct names"
+    out.innerText += msg
+}
+
+function randomId() {
+
+let count=0;
+let arrayNumber=0;
+let mapNumber=0; 
+let result="";
+let time=0;
+let timemap=0;
+let timearray=0;
+while(count!=10000)
+{
+    let randomNumber=116690000+ (Math.floor(Math.random() * 1000) + 1000);
+    randomNumber=randomNumber+"";
+    time = performance.now()
+     
+    if (map.has(randomNumber)){  mapNumber=mapNumber+1; }
+    time = performance.now() - time;
+    timemap+=time;
+    time = performance.now()
+  
+    if (array.includes(randomNumber)){ arrayNumber=arrayNumber+1;}
+    time = performance.now() - time;
+    timearray+=time;
+    count=count+1;
+}
+result=arrayNumber+" adet ID eşleşdi (Array ve Map için) "+"\nArray Suresi: "+ timearray.toPrecision(3)+" msec"+"\n"+"Map Suresi: "+ timemap.toPrecision(3)+" msec";
+return result;
+}
+
+</script>
+
+
+</head>
+
+<body>
+<body>
+
+<h2 id="title" 
+">CW7</h2>
+
+<button class="button" , onClick='out.innerText+="\n\n"+randomId()'>Random Search 10.000 Student id</button>
+<p id=out >Result:</p>
+
+<script>
+    title.innerText = document.title;
+    readData("Students.txt");
+</script>
+
+<hr />
+<h3>Sample code</h3>
+<pre id=sample></pre>
+<hr />
+<script>
+sample.innerText = randomId
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
