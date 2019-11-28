@@ -32,6 +32,7 @@
 <script>
     navigator.serviceWorker.register('sw.js')
 </script>
- </body>   
+</body>   
+<html>
 
 
