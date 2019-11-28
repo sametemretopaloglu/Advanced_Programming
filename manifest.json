@@ -2,7 +2,6 @@
   "name": "Advanced Programming",
   "start_url": "/Advanced_Programming/",
   "display": "standalone",
-  "background_color": "ping",
   "icons": [
     {
       "src": "https://maeyler.github.io/JS/images/JS.png",
