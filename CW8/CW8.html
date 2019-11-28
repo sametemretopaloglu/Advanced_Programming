@@ -1,0 +1,85 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> CW8/FATİH MEHMET ERGİN</title>
+    <link rel="icon" sizes="192x192" href="https://maeyler.github.io/JS/images/JS.png">
+    <link rel="manifest" href="manifest.json">
+<script src="Database.js"> </script>
+
+<script>
+c=new Database();
+    navigator.serviceWorker.register('sw.js')
+</script>
+
+<script>
+"use strict";
+
+function makeTable( ) 
+{
+    let row = "<th></th>";
+    for (let j of (Object.keys(c.studentList[0]))) 
+        row += "<th>"+j+"</th>";
+    let text = "<tr>"+row+"</tr>";
+    for (let i = 0; i < c.studentList.length; i++) {
+       row = "<th>"+(i+1)+"</th>";
+       for (let j of (Object.keys(c.studentList[0]))) {
+          
+          row += "<td>"+(c.studentList[i][j])+"</td>";
+       }
+       text += "<tr>"+row+"</tr>";
+    }
+    const t = text.length+" chars";
+    
+    tablo.innerHTML = text; 
+}
+
+
+</script>
+
+<style>
+    table { border-collapse: collapse; }
+    th { color: blue; padding: 5px 5px; }
+    td { 
+        border: 1px solid blue; 
+        padding: 5px 5px; 
+        text-align: center; 
+    }
+    td:hover .tip { visibility: visible; }
+    .tip {
+        visibility: hidden;
+        font-size: small;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 5px 5px;
+        position: absolute;
+    }
+</style>
+
+</head>
+
+<body>
+
+<center>
+<h2 id="title">TABLO OLUŞTUR</h2>
+<table id="tablo">
+
+<p><a href="https://fatihmehmetergin.github.io/Advanced_Programming/">Repository</a>: Fatih Mehmet Ergin:Advance Programing Website</p>
+
+<p><a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW5/work/EloquentJS.html">CW3</a>: Inspector</p>
+</table>
+
+<input type="button" value="Make Table" onclick="makeTable()">
+
+</center>
+
+<script>
+    title.innerText = document.title;
+    
+</script>
+
+
+ 
+</body>
+</html>
+
