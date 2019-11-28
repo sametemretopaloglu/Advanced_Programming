@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="https://maeyler.github.io/JS/images/JS.png">
+    <link rel="manifest" href="manifest.json">
+</head>
+<script>
+    navigator.serviceWorker.register('sw.js')
+</script>
 # Advanced_Programming
 
 <h2 id="classworks">Classworks</h2>
