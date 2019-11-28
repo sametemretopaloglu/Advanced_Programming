@@ -28,9 +28,10 @@
 
 <p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW1">Poisson Probabilities</a></p>
 
-
+<body>
 <script>
     navigator.serviceWorker.register('sw.js')
 </script>
+ </body>   
 
 
