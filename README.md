@@ -24,6 +24,8 @@
 
 <p>7.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW7/CW7.html">Timing</a></p>
 
+<p>8.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/CW8/CW8.html">DOM and PWA</a></p>
+
 
 <h2 id="classworks">Homeworks</h2>
 
