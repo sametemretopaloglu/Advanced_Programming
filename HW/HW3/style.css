@@ -1,0 +1,165 @@
+body
+{
+	margin:0;
+	padding:0;
+	background: white;
+}
+.zemin
+{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-top: 10px solid black;
+	
+	display: flex;
+}
+/*
+	ip için kullandım .
+*/
+.zemin span
+{				
+		width: 3px;
+		height: 300px;
+		background: yellow;
+		margin: 0 20px;
+		transform-origin: top; 
+}
+
+.zemin span:after
+{
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	left: -25px;
+	width: 50px;
+	height: 50px;
+	background: black;
+	border-radius: 50%;
+}
+.zemin span:last-child:after
+{
+	content: '';
+	bottom: -20px;
+	left: -40px;
+	width: 55px;
+	height: 60px;
+	background: red;
+	border-radius: 30%;
+	
+}
+
+.zemin span:first-child
+{
+	
+	animation: animate 1s linear infinite;
+	animation-delay: 0.065s;
+	
+	
+	
+}
+
+.zemin span:nth-child(2)
+{	
+	animation: animate3 1s linear infinite;
+	animation-delay: 0.065s;
+	
+	
+	
+}
+.zemin span:nth-child(3)
+{
+
+	animation: animate4 1s linear infinite;
+	animation-delay: 0.065s;
+		
+	
+}
+
+.zemin span:last-child
+{
+	background: red;
+	animation: animate2 1s linear infinite;
+	animation-delay: 0.48s;
+}
+
+
+@keyframes animate
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	25%
+	{
+		transform: rotate(45deg);
+	}
+	50%
+	{
+		transform: rotate(-10deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}
+	
+}
+@keyframes animate2
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	25%
+	{
+		transform: rotate(-40deg);
+	}
+	50%
+	{
+		transform: rotate(5deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}	
+}
+@keyframes animate3
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	25%
+	{
+		transform: rotate(40deg);
+	}
+	50%
+	{
+		transform: rotate(-15deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}	
+}
+@keyframes animate4
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	25%
+	{
+		transform: rotate(30deg);
+	}
+	50%
+	{
+		transform: rotate(-20deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}	
+}
+
+

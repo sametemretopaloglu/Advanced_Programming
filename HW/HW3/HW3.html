@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HW#3 Animation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="zemin">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span after style="background-color:black; width: 8px;"></span>
+		
+		
+	</div>
+</body>
+<style>
+#myContainer {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background: black;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+}
+</style>
+
+
+<p>
+<button onclick="myMove()">Hareket Ettir</button> 
+</p>
+
+<div id ="myContainer">
+<div id ="myAnimation"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var i = 0;
+  var y = 300;
+  var id = setInterval(frame, 1); /* setTimeout(function,miliseconds)'da kullanabilirdik */
+
+  
+ function frame() {
+     
+     
+      
+    i++; 
+      elem.style.top = i + 'px'; 
+      elem.style.left = i + 'px'; 
+      if(i==300)
+      {
+      clearInterval(id); 
+
+      elem.style.top = 0 + 'px'; 
+      elem.style.left = 0 + 'px'; 
+      }
+  
+}
+}
+</script>
+</html>
+

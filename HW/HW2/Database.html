@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Database Fatih Mehmet Ergin</title>
+
+  <style>
+    .button {
+    width: auto;
+        }
+      </style>
+
+<script src="Database.js"> </script>
+
+<script>
+c=new Database();
+</script>
+
+</head>
+
+<body>
+<body>
+
+<h2 id="title" style="
+    
+">Home Work 2</h2>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.randomStd()'>Random Ogrenci</button>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.randomCourse()'>Random Ders</button>
+
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findBest()'>Best GPA</button>
+
+
+
+
+<button class="button" , onClick='out.innerText=""'>Clear</button>
+
+
+<p>GPA: 
+<input type=number id=gpa >
+</p>
+<button class="button" , onClick='out.innerText+="\n\n"+c.findGPA(gpa.value)'> GPA'si yuksek ogrenci</button>
+<button class="button" , onClick='out.innerText+="\n\n"+c.findGPA2(gpa.value)'> GPA'si dusuk ogrenci</button>
+
+<hr>
+
+<p>Ogrenci ID: 
+<input type=number id=sID >
+</p>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findCourses(sID.value)'> Aldigi Dersler </button>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findSinav(sID.value)'> Sinav Programi </button>
+
+
+<hr>
+<p>Ders Kodu: 
+<input type=text id=cID >
+</p>
+
+<button class="button" ,  onClick='out.innerText+="\n\n"+c.findStudents(cID.value)'> Ogrencileri Listele </button>
+
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findClassList(cID.value)'> Siniflari Listele </button>
+<hr>
+
+<p>Sinif Kodu: 
+<input type=text id=dID >
+</p>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findCourseList(dID.value)'> Dersleri Listele </button>
+
+<button class="button" ,  onClick='out.innerText+="\n\n"+c.findCourseListCount(dID.value)'> Derslerin Sayisi </button>
+<hr>
+
+
+
+<p id=out >Result:</p>
+
+<script>
+    title.innerText = document.title;
+       
+    
+</script>
+
+</body>
+</html>
+
