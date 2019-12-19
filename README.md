@@ -32,13 +32,13 @@
 
 <p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW/HW1/HW1">Poisson Probabilities</a></p>
 
-<p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW/HW2/Database.html">Database</a></p>
+<p>2.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW/HW2/Database.html">Database</a></p>
 
-<p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW/HW3/HW3.html">Animations</a></p>
+<p>3.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/HW/HW3/HW3.html">Animations</a></p>
 
 <h2 id="classworks">Term Project</h2>
 
-<p>1.<a href="https://fatihmehmetergin.github.io/Advanced_Programming/Project/puzzle.html">8 Puzzle</a></p>
+<p><a href="https://fatihmehmetergin.github.io/Advanced_Programming/Project/puzzle.html">8 Puzzle</a></p>
 
 
 
