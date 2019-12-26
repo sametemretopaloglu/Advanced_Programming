@@ -52,3 +52,42 @@ function randomTaslar(){
         document.getElementById(taslar[i]).firstChild.data = val
     }
 }
+
+////////////////////taşları karma 
+
+function tasBul(val){
+    for (i = 0; i < taslar.length; i++) { 
+            if(document.getElementById(taslar[i]).firstChild.data == val){
+                return(taslar[i])
+            }
+        }
+}
+
+function degisme(id, bosTasId){
+    let yakinlar = []
+    if([2,5,8].includes(parseInt(bosTasId[1]))){
+        yakinlar = [+3,-3,-1]
+    }else if([0,3,6].includes(parseInt(bosTasId[1]))){
+        yakinlar = [+3,+1,-3]
+    }else{
+        yakinlar = [+3,+1,-3,-1]
+    }
+    for(i = 0; i < taslar.length; i++){
+        if(parseInt(bosTasId[1])+parseInt(yakinlar[i]) == parseInt(id[1])){
+            return(true);
+        }
+    }
+    return(false)
+}
+
+
+function pushed(id)
+{
+    var btn = document.getElementById(id);
+    if (btn.firstChild.data!=" "){
+        bosTasId = tasBul(" ") 
+        if(degisme(id, bosTasId) == false) return;
+        document.getElementById(bosTasId).firstChild.data = btn.firstChild.data;
+        btn.firstChild.data = " "
+    }
+}
